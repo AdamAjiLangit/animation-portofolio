@@ -5,7 +5,7 @@ import { useRef } from 'react';
 import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
 import Magnetic from '../../common/Magnetic';
 
-export default function index() {
+export default function IndexComponent() {
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -30,7 +30,7 @@ export default function index() {
                         </div>
                     </span> */}
                     <div className={styles.working}>
-                        <h2>Let's work</h2>
+                        <h2>Let&apos;s work</h2>
                         <h2>together</h2>
                     </div>
                     <motion.div style={{ x }} className={styles.buttonContainer}>

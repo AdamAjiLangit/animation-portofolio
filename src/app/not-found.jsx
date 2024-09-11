@@ -11,7 +11,7 @@ export default function Custom404() {
             </div>
             <div className="oops">
                 <h2>OOPS!</h2>
-                <p>We can't find the page that you're looking for :(</p>
+                <p>We can&apos;t find the page that you're looking for :(</p>
             </div>
             <div className="center-line">
                 <div className="hole">

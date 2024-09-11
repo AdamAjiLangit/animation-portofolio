@@ -41,8 +41,7 @@ const slider2 = [
     }
 ]
 
-export default function index() {
-
+export default function IndexComponent() {
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
