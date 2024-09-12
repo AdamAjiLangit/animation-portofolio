@@ -5,6 +5,7 @@
     padding-right: 200px;
     flex-direction: column;
     margin-top: 300px;
+    margin-bottom: 600px;
 
     .body {
         max-width: 1400px;
@@ -78,4 +79,7 @@
         visibility: hidden;
     }
 
+    .cursor {
+        visibility: hidden;
+    }
 }

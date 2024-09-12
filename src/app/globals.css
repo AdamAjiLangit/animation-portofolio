@@ -4,13 +4,13 @@
 
 body {
   margin: 0px;
-  overflow: hidden;
+  /* overflow: hidden; */
   cursor: wait;
 }
 
 @media screen and (max-width: 400px) {
   body {
-    overflow-y: visible;
+    overflow: visible;
   }
 }
 
