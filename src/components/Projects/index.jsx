@@ -12,19 +12,19 @@ export const projects = [
     title: "Rental Website",
     src: "https://adam-personal-portofolio.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhomepage.91364ca3.png&w=1920&q=95",
     color: "#000000",
-    link: "https://rental-motor-kudus.vercel.app/"
+    url: "https://rental-motor-kudus.vercel.app/"
   },
   {
     title: "Jelajah Kalbar",
     src: "https://adam-personal-portofolio.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FJelajahKalbar.a1621753.png&w=1920&q=95",
     color: "#8C8C8C",
-    link: "https://website-kalimantan-barat.vercel.app/"
+    url: "https://website-kalimantan-barat.vercel.app/"
   },
   {
     title: "Health Care",
     src: "https://adam-personal-portofolio.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FhealthCare.e8ddfd80.png&w=1920&q=95",
     color: "#EFE8D3",
-    link: "https://rental-motor-kudus.vercel.app/"
+    url: ""
   },
 ]
 
@@ -79,7 +79,7 @@ export default function Home() {
       <div className={styles.body}>
         {
           projects.map((project, index) => {
-            return <Project index={index} title={project.title} manageModal={manageModal} key={index} />
+            return <Project index={index} title={project.title} manageModal={manageModal} key={index} url={project.url} />
           })
         }
       </div>

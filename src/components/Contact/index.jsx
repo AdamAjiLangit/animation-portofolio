@@ -1,5 +1,6 @@
 import styles from './style.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
 import Rounded from '../../common/RoundedButton';
 import { useRef } from 'react';
 import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
@@ -63,14 +64,20 @@ export default function IndexComponent() {
                         <span>
                             <h3>socials</h3>
                             <Magnetic>
-                                <p>Instagram</p>
+                                <Link href="https://www.instagram.com/zein_wx/">
+                                    <p>Instagram</p>
+                                </Link>
                             </Magnetic>
                         </span>
                         <Magnetic>
-                            <p>Dribbble</p>
+                            <Link href="https://www.linkedin.com/in/adam-aji-langit-817670267/">
+                                <p>Linkedin</p>
+                            </Link>
                         </Magnetic>
                         <Magnetic>
-                            <p>Linkedin</p>
+                            <Link href="https://github.com/AdamAjiLangit">
+                                <p>Github</p>
+                            </Link>
                         </Magnetic>
                     </div>
                 </div>

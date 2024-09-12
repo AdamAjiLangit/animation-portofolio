@@ -20,7 +20,7 @@
             flex-direction: column;
             font-size: 56px;
             gap: 12px;
-            margin-top: 80px;
+            margin-top: 20px;
 
             .header {
                 color: rgb(153, 153, 153);
@@ -39,8 +39,6 @@
     }
 
     @media screen and (max-width: 768px) {
-        .body {
-            align-items: end;
-        }
+        
     }
 }

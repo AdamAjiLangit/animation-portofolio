@@ -196,6 +196,10 @@
                 display: flex;
                 justify-content: space-between;
             }
+
+            .button:hover {
+                background-color: #455CE9;
+            }
         }
     }
 }
