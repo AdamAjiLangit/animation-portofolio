@@ -27,7 +27,25 @@ export default function IndexComponent({ children, backgroundColor = "#455CE9", 
   };
 
   return (
-    <Magnetic>
+    <>
+      <div className='hidden md:block'>
+        <Magnetic>
+          <div
+            className={styles.roundedButton}
+            style={{ overflow: "hidden" }}
+            onMouseEnter={manageMouseEnter}
+            onMouseLeave={manageMouseLeave}
+            {...attributes}
+          >
+            {children}
+            <div
+              ref={circle}
+              style={{ backgroundColor }}
+              className={styles.circle}
+            ></div>
+          </div>
+        </Magnetic>
+      </div>
       <div
         className={styles.roundedButton}
         style={{ overflow: "hidden" }}
@@ -42,6 +60,6 @@ export default function IndexComponent({ children, backgroundColor = "#455CE9", 
           className={styles.circle}
         ></div>
       </div>
-    </Magnetic>
+    </>
   );
 }
