@@ -2,6 +2,10 @@ import React from 'react';
 import '../../styles/not-found.css';
 
 export default function Custom404() {
+    if (typeof window !== 'undefined') {
+        console.log("Window Test");
+    }
+
     return (
         <div className="room">
             <div className="cuboid">
