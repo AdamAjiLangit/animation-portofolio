@@ -25,7 +25,11 @@ export default function Home() {
         }, 2000)
       }
     )()
-  }, [])
+  }, []);
+
+  if (typeof window !== 'undefined') {
+    console.log("Window Test");
+  }
 
   return (
     <main className={styles.main}>
