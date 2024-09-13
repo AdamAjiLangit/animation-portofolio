@@ -4,17 +4,20 @@ import gsap from 'gsap';
 import Magnetic from '../Magnetic';
 
 export default function IndexComponent({ children, backgroundColor = "#455CE9", ...attributes }) {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Adjust the breakpoint as needed
+  const [isMobile, setIsMobile] = useState(false);
   const circle = useRef(null);
   const timeline = useRef(null);
   let timeoutId = null;
 
   useEffect(() => {
-    // Update the state when the screen size changes
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth < 768);
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+      const handleResize = () => setIsMobile(window.innerWidth < 768);
+      window.addEventListener('resize', handleResize);
+
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
   useEffect(() => {
