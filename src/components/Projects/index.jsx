@@ -12,7 +12,7 @@ export const projects = [
     title: "Rental Website",
     src: "https://adam-personal-portofolio.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhomepage.91364ca3.png&w=1920&q=95",
     color: "#000000",
-    url: "https://rental-motor-kudus.vercel.app/"
+    url: "https://rental-motor-kudus.vercel.app/",
   },
   {
     title: "Jelajah Kalbar",
@@ -35,7 +35,6 @@ const scaleAnimation = {
 }
 
 export default function Home() {
-
   const [modal, setModal] = useState({ active: false, index: 0 })
   const { active, index } = modal;
   const modalContainer = useRef(null);
