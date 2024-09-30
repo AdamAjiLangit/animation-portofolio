@@ -9,10 +9,10 @@
 
     .body {
         box-sizing: border-box;
-        height: 100%;
         padding: 100px;
         display: flex;
         flex-direction: column;
+        gap: 20px;
         justify-content: space-between;
 
         .nav {
@@ -36,9 +36,5 @@
                 font-weight: 300;
             }
         }
-    }
-
-    @media screen and (max-width: 768px) {
-        
     }
 }

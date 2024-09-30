@@ -4,7 +4,7 @@ import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
 export const RevealLinks = () => {
     return (
-        <section className=" flex flex-col md:flex-row mt-5 gap-5 text-white w-fit">
+        <section className="flex flex-col md:flex-row mt-5 gap-5 text-white w-fit">
             <FlipLink
                 href="https://www.linkedin.com/in/adam-aji-langit-817670267/"
                 hoverText="Connect"
