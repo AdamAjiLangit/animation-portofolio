@@ -4,7 +4,9 @@
 
 body {
   margin: 0px;
-  overflow: hidden;
+  padding: 0px;
+  /* overflow: hidden; */
+  overflow-x: hidden;
   cursor: wait;
 }
 

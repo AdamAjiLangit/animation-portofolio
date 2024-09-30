@@ -117,12 +117,12 @@
 .headerButtonContainer {
     transform: scale(0);
     position: fixed;
-    right: 0px;
+    right: calc(20px);
     z-index: 4;
 
     .button {
         position: relative;
-        margin: 20px;
+        margin: 0;
         width: 80px;
         height: 80px;
         border-radius: 50%;
