@@ -34,49 +34,51 @@ export default function IndexComponent() {
 
     return (
         <>
-            <div ref={header} className={styles.header}>
-                <div className={styles.logo}>
-                    <p className={styles.copyright}>©</p>
-                    <div className={styles.name}>
-                        <p className={styles.codeBy}>Code by</p>
-                        <p className={styles.adam}>Adam</p>
-                        <p className={styles.aji}>Aji</p>
+            <div className='hidden md:block'>
+                <div ref={header} className={styles.header}>
+                    <div className={styles.logo}>
+                        <p className={styles.copyright}>©</p>
+                        <div className={styles.name}>
+                            <p className={styles.codeBy}>Code by</p>
+                            <p className={styles.adam}>Adam</p>
+                            <p className={styles.aji}>Aji</p>
+                        </div>
                     </div>
-                </div>
-                <div className={styles.nav}>
-                    <Magnetic>
-                        <div className={styles.el}>
-                            <a>Work</a>
-                            <div className={styles.indicator}></div>
-                        </div>
-                    </Magnetic>
-                    <Magnetic>
-                        <div className={styles.el}>
-                            <a>About</a>
-                            <div className={styles.indicator}></div>
-                        </div>
-                    </Magnetic>
-                    <Magnetic>
-                        <div className={styles.el}>
-                            <a>Contact</a>
-                            <div className={styles.indicator}></div>
-                        </div>
-                    </Magnetic>
+                    <div className={styles.nav}>
+                        <Magnetic>
+                            <div className={styles.el}>
+                                <a>Work</a>
+                                <div className={styles.indicator}></div>
+                            </div>
+                        </Magnetic>
+                        <Magnetic>
+                            <div className={styles.el}>
+                                <a>About</a>
+                                <div className={styles.indicator}></div>
+                            </div>
+                        </Magnetic>
+                        <Magnetic>
+                            <div className={styles.el}>
+                                <a>Contact</a>
+                                <div className={styles.indicator}></div>
+                            </div>
+                        </Magnetic>
+                    </div>
+                    <div ref={button} className={styles.headerButtonContainer}>
+                        <Rounded onClick={() => { setIsActive(!isActive) }} className={`${styles.button}`}>
+                            <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
+                        </Rounded>
+                    </div>
                 </div>
                 <div ref={button} className={styles.headerButtonContainer}>
                     <Rounded onClick={() => { setIsActive(!isActive) }} className={`${styles.button}`}>
                         <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
                     </Rounded>
                 </div>
+                <AnimatePresence mode="wait">
+                    {isActive && <Nav />}
+                </AnimatePresence>
             </div>
-            <div ref={button} className={styles.headerButtonContainer}>
-                <Rounded onClick={() => { setIsActive(!isActive) }} className={`${styles.button}`}>
-                    <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
-                </Rounded>
-            </div>
-            <AnimatePresence mode="wait">
-                {isActive && <Nav />}
-            </AnimatePresence>
         </>
     )
 }
