@@ -30,7 +30,7 @@ export default function IndexComponent() {
     const rotate = useTransform(scrollYProgress, [0, 1], [120, isMobile ? 0 : 90])
     const margin = useTransform(scrollYProgress, [0, 1], [0, isMobile ? 0 : -100])
     return (
-        <motion.div style={{ y }} ref={container} className={styles.contact}>
+        <motion.div ref={container} className={styles.contact}>
             <div className={styles.body}>
                 <div className={styles.title}>
                     {/* <span>
