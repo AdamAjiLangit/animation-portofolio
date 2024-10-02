@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${poppins.variable} min-h-screen bg-background font-sans antialiased`}
       >
-        {/* <Header /> */}
+        <Header />
         <main className="poppins">
           {children}
         </main>
