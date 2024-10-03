@@ -47,19 +47,19 @@ export default function IndexComponent() {
                     <div className={styles.nav}>
                         <Magnetic>
                             <div className={styles.el}>
-                                <a>Work</a>
+                                <a href='/work'>Work</a>
                                 <div className={styles.indicator}></div>
                             </div>
                         </Magnetic>
                         <Magnetic>
                             <div className={styles.el}>
-                                <a>About</a>
+                                <a href='/about'>About</a>
                                 <div className={styles.indicator}></div>
                             </div>
                         </Magnetic>
                         <Magnetic>
                             <div className={styles.el}>
-                                <a>Contact</a>
+                                <a href='/contact'>Contact</a>
                                 <div className={styles.indicator}></div>
                             </div>
                         </Magnetic>

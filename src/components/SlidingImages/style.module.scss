@@ -1,10 +1,8 @@
 .slidingImages {
-    visibility: hidden;
     display: flex;
     flex-direction: column;
     gap: 3vw;
     position: relative;
-    margin-top: 250px;
     background-color: white;
     z-index: 1;
 
@@ -12,8 +10,7 @@
         display: flex;
         position: relative;
         gap: 3vw;
-        width: 120vh;
-        left: -10vw;
+        // left: -10vw;
 
         .project {
             width: 25%;
@@ -29,13 +26,14 @@
 
                 img {
                     object-fit: cover;
+                    cursor: pointer;
                 }
             }
         }
     }
 
     .circleContainer {
-        background-color: red;
+        background-color: black;
         position: relative;
         max-width: fit-content;
         margin-top: 100px;
@@ -53,8 +51,8 @@
     }
 }
 
-@media screen and (min-width: 768px) {
-    .slidingImages {
-        visibility: visible;
-    }
-}
+// @media screen and (min-width: 768px) {
+//     .slidingImages {
+//         visibility: visible;
+//     }
+// }

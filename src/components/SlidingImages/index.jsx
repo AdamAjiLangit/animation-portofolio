@@ -19,7 +19,7 @@ const slider1 = [
     {
         color: "#21242b",
         src: "google.jpg"
-    }
+    },
 ]
 
 const slider2 = [
