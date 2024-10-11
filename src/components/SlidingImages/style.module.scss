@@ -4,6 +4,7 @@
     gap: 3vw;
     position: relative;
     background-color: white;
+    visibility: hidden;
     z-index: 1;
 
     .slider {
@@ -13,8 +14,8 @@
         // left: -10vw;
 
         .project {
-            width: 25%;
-            height: 20vw;
+            width: 100vw;
+            height: 25vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -33,7 +34,7 @@
     }
 
     .circleContainer {
-        background-color: black;
+        background-color: white;
         position: relative;
         max-width: fit-content;
         margin-top: 100px;
@@ -51,8 +52,8 @@
     }
 }
 
-// @media screen and (min-width: 768px) {
-//     .slidingImages {
-//         visibility: visible;
-//     }
-// }
+@media screen and (min-width: 768px) {
+    .slidingImages {
+        visibility: visible;
+    }
+}
