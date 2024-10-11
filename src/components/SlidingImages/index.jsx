@@ -10,11 +10,11 @@ const slider1 = [
     },
     {
         color: "#d6d7dc",
-        src: "decimal.jpg"
+        src: "cozy.png"
     },
     {
         color: "#e3e3e3",
-        src: "funny.jpg"
+        src: "ratio.png"
     },
     {
         color: "#21242b",
