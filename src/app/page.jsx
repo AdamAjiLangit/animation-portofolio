@@ -1,7 +1,6 @@
 'use client';
-
-import styles from './page.module.scss';
-import { useEffect, useState } from 'react';
+import styles from './page.module.scss'
+import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion';
 import Preloader from '../components/Preloader';
 import Landing from '../components/Landing';
@@ -14,44 +13,34 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      (async () => {
-        const LocomotiveScroll = (await import('locomotive-scroll')).default;
+    (
+      async () => {
+        const LocomotiveScroll = (await import('locomotive-scroll')).default
         const locomotiveScroll = new LocomotiveScroll();
 
         setTimeout(() => {
           setIsLoading(false);
-          if (typeof document !== 'undefined') {
-            document.body.style.cursor = 'default';
-            window.scrollTo(0, 0);
-          }
-        }, 2000);
-      })();
-    }
+          document.body.style.cursor = 'default'
+          window.scrollTo(0, 0);
+        }, 2000)
+      }
+    )()
   }, []);
 
   if (typeof window !== 'undefined') {
     console.log("Window Test");
   }
 
-  if (typeof document !== 'undefined') {
-    console.log("doc Test");
-  }
-
   return (
-    <main>
-      <AnimatePresence mode="wait">
+    <main className={styles.main}>
+      <AnimatePresence mode='wait'>
         {isLoading && <Preloader />}
       </AnimatePresence>
-      {!isLoading && (
-        <>
-          <Landing />
-          <Description />
-          <Projects />
-          <SlidingImages />
-          <Contact />
-        </>
-      )}
+      <Landing />
+      <Description />
+      <Projects />
+      <SlidingImages />
+      <Contact />
     </main>
-  );
+  )
 }
