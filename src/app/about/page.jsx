@@ -25,19 +25,21 @@ export default function About() {
         const interval = setInterval(() => {
             index = (index + 1) % dotSequence.length;
             setDotText(dotSequence[index]);
-        }, 500); // Change every 500ms for a ticking effect
+        }, 500);
 
         return () => clearInterval(interval);
     }, []);
 
     useEffect(() => {
-        document.body.style.overflow = 'scroll';
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+        if (typeof document !== "undefined") {
+            document.body.style.overflow = 'scroll';
+            const handleResize = () => {
+                setIsMobile(window.innerWidth <= 768);
+            };
+            handleResize();
+            window.addEventListener('resize', handleResize);
+            return () => window.removeEventListener('resize', handleResize);
+        }
     }, []);
 
     const x = useTransform(scrollYProgress, [0, 1], [0, isMobile ? 0 : 250])
