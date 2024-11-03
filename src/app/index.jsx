@@ -14,14 +14,29 @@ export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setTimeout(() => {
-        setIsLoading(false);
-        document.body.style.cursor = 'default';
-        window.scrollTo(0, 0);
-      }, 2000);
+    if (typeof window !== "undefined") {
+      (async () => {
+        const LocomotiveScroll = (await import('locomotive-scroll')).default;
+        const locomotiveScroll = new LocomotiveScroll();
+
+        setTimeout(() => {
+          setIsLoading(false);
+          if (typeof document !== 'undefined') {
+            document.body.style.cursor = 'default';
+            window.scrollTo(0, 0);
+          }
+        }, 2000);
+      })();
     }
   }, []);
+
+  if (typeof window !== 'undefined') {
+    console.log("Window Test");
+  }
+
+  if (typeof document !== 'undefined') {
+    console.log("doc Test");
+  }
 
   return (
     <main>
