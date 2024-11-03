@@ -199,7 +199,7 @@ export default function About() {
                         <h4 className='text-gray-400 mb-8'>03</h4>
                         <div className="w-full h-[1px] bg-gray-400 mt-2 mb-8"></div>
                         <h3 className='text-[2em] mb-8'>✨The full package</h3>
-                        <h4>A complete website from concept to implementation, that's what makes me stand out. My great sense for design and my development skills enable me to create kick-ass projects.</h4>
+                        <h4>A complete website from concept to implementation, that&apos;s what makes me stand out. My great sense for design and my development skills enable me to create kick-ass projects.</h4>
                     </div>
                 </div>
             </div>
