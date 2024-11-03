@@ -12,7 +12,9 @@ export default function Index() {
     const [showPreloader, setShowPreloader] = useState(true);
     const [dimension, setDimension] = useState({ width: 0, height: 0 });
     const pathname = usePathname();
-    document.body.style.cursor = 'wait';
+    if (typeof document !== 'undefined') {
+        document.body.style.cursor = 'wait';
+    }
 
     useEffect(() => {
         const hasVisited = localStorage.getItem('hasVisited');
