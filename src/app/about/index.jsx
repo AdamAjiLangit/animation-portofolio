@@ -47,6 +47,14 @@ export default function About() {
     const rotate = useTransform(scrollYProgress, [0, 1], [-120, isMobile ? 0 : -20])
     const margin = useTransform(scrollYProgress, [0, 1], [0, isMobile ? 0 : -100])
 
+    if (typeof window !== 'undefined') {
+        console.log("Window Test");
+    }
+
+    if (typeof document !== 'undefined') {
+        console.log("doc Test");
+    }
+
     return (
         <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
             <div className={`${styles.container} mx-[10%] mt-[15%]`}>
