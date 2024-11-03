@@ -1,5 +1,6 @@
 'use client';
-import styles from './style.module.scss'
+import styles from './style.module.scss';
+import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import Project from './components/project';
 import { motion } from 'framer-motion';
@@ -9,25 +10,32 @@ import Rounded from '../../common/RoundedButton';
 
 export const projects = [
   {
+    title: "Cozy",
+    src: "/images/cozy.png",
+    color: "#EFE8D3",
+    url: "https://cozy-adam.vercel.app/",
+    date: "14 Oct 2024 - Current"
+  },
+  {
     title: "Rental Website",
     src: "https://adam-personal-portofolio.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fhomepage.91364ca3.png&w=1920&q=95",
-    color: "#000000",
+    color: "#ff4d33",
     url: "https://rental-motor-kudus.vercel.app/",
     date: "25 Apr 2024 - 2 Sep 2024"
   },
   {
-    title: "Jelajah Kalbar",
-    src: "https://adam-personal-portofolio.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FJelajahKalbar.a1621753.png&w=1920&q=95",
-    color: "#8C8C8C",
-    url: "https://website-kalimantan-barat.vercel.app/",
-    date: "21 Sep 2023 - 21 Nov 2023"
-  },
-  {
     title: "Health Care",
     src: "https://adam-personal-portofolio.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FhealthCare.e8ddfd80.png&w=1920&q=95",
-    color: "#EFE8D3",
+    color: "#21242b",
     url: "https://health-care-lemon.vercel.app/",
     date: "7 Sep 2024 - 18 Sep 2024"
+  },
+  {
+    title: "Jelajah Kalbar",
+    src: "https://adam-personal-portofolio.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FJelajahKalbar.a1621753.png&w=1920&q=95",
+    color: "#ffa500",
+    url: "https://website-kalimantan-barat.vercel.app/",
+    date: "21 Sep 2023 - 21 Nov 2023"
   },
 ]
 
@@ -93,14 +101,16 @@ export default function Home() {
           <div style={{ top: index * -100 + "%" }} className={styles.modalSlider}>
             {
               projects.map((project, index) => {
-                const { src, color } = project
+                const { src, color, url } = project
                 return <div className={styles.modal} style={{ backgroundColor: color }} key={`modal_${index}`}>
-                  <img
-                    src={`${src}`}
-                    width={300}
-                    height={0}
-                    alt="image"
-                  />
+                  <Link href="/">
+                    <img
+                      src={`${src}`}
+                      width={300}
+                      height={0}
+                      alt="image"
+                    />
+                  </Link>
                 </div>
               })
             }

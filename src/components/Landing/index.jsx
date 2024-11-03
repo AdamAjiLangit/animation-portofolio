@@ -8,7 +8,6 @@ import { slideUp } from './animation';
 import { motion } from 'framer-motion';
 
 export default function Home() {
-
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);

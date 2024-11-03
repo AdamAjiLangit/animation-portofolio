@@ -1,6 +1,7 @@
 'use client';
 import styles from './style.module.scss';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { opacity, slideUp } from './anim';
 
@@ -8,7 +9,22 @@ const words = ["Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten ta
 
 export default function Index() {
     const [index, setIndex] = useState(0);
+    const [showPreloader, setShowPreloader] = useState(true);
     const [dimension, setDimension] = useState({ width: 0, height: 0 });
+    const pathname = usePathname();
+    document.body.style.cursor = 'wait';
+
+    useEffect(() => {
+        const hasVisited = localStorage.getItem('hasVisited');
+
+        if (pathname === '/') {
+            setShowPreloader(true);
+        } else if (hasVisited) {
+            setShowPreloader(false);
+        } else {
+            localStorage.getItem('hasVisited', true);
+        }
+    }, []);
 
     useEffect(() => {
         setDimension({ width: window.innerWidth, height: window.innerHeight })
@@ -33,7 +49,9 @@ export default function Index() {
             d: targetPath,
             transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3 }
         }
-    }
+    };
+
+    if (!showPreloader) return null;
 
     return (
         <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>
