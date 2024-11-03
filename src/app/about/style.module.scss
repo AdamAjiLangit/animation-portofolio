@@ -1,0 +1,69 @@
+.container {
+    h1 {
+        font-size: calc(clamp(3.25em, 7vw, 8em) * .875);
+        line-height: 1.2;
+        letter-spacing: -0.04em;
+        word-spacing: -0.04em;
+    }
+
+    .title {
+        border-bottom: 1px solid rgb(134, 134, 134);
+        padding-bottom: 100px;
+        position: relative;
+
+        .buttonContainer {
+            position: absolute;
+            left: calc(100% - 400px);
+            top: calc(100% - 90px);
+        }
+
+        .button {
+            width: 180px;
+            height: 180px;
+            background-color: #000;
+            border-radius: 50%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            p {
+                margin: 0px;
+                font-size: 16px;
+                font-weight: 300;
+                z-index: 2;
+                position: relative;
+            }
+        }
+    }
+
+    .desc {
+        position: relative;
+        margin-top: 100px;
+        margin-bottom: 100px;
+
+        svg {
+            position: absolute;
+            top: 50%;
+            left: 0%;
+        }
+    }
+
+    .helping {
+        margin-bottom: 80px;
+
+        h2 {
+            font-size: 3em;
+            line-height: 1.2;
+            letter-spacing: -0.04em;
+            word-spacing: -0.04em;
+        }
+
+        span {
+            font-size: 1.1em;
+            letter-spacing: 0.009em;
+            color: black;
+        }
+    }
+}

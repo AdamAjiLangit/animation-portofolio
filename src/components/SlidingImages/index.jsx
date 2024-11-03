@@ -2,29 +2,34 @@ import { useRef } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import styles from './style.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const slider1 = [
     {
-        color: "#e3e5e7",
-        src: "c2.jpg"
+        color: "#d7d4cf",
+        src: "rentalmotor.png",
+        href: ""
     },
     {
-        color: "#d6d7dc",
-        src: "cozy.png"
+        color: "#d7d4cf",
+        src: "cozy.png",
+        href: "https://cozy-adam.vercel.app/"
     },
     {
-        color: "#e3e3e3",
-        src: "ratio.png"
+        color: "#d7d4cf",
+        src: "ratio.png",
+        href: "https://ratio-adam.vercel.app/"
     },
     {
-        color: "#21242b",
-        src: "google.jpg"
+        color: "#d7d4cf",
+        src: "jelajahkalbar.png",
+        href: "https://website-kalimantan-barat.vercel.app/"
     },
 ]
 
 const slider2 = [
     {
-        color: "#d4e3ec",
+        color: "#d7d4cf",
         src: "maven.jpg"
     },
     {
@@ -57,12 +62,15 @@ export default function IndexComponent() {
             <motion.div style={{ x: x1 }} className={styles.slider}>
                 {
                     slider1.map((project, index) => {
-                        return <div key={index} className={styles.project} style={{ backgroundColor: project.color }} >
+                        return <div key={index} className={`${styles.project} hover:scale-110 transition`} style={{ backgroundColor: project.color }} >
                             <div className={styles.imageContainer}>
-                                <Image
-                                    fill={true}
-                                    alt={"image"}
-                                    src={`/images/${project.src}`} />
+                                <Link href={project.href} target='_blank'>
+                                    <Image
+                                        fill={true}
+                                        alt={"image"}
+                                        src={`/images/${project.src}`}
+                                    />
+                                </Link>
                             </div>
                         </div>
                     })
@@ -71,7 +79,7 @@ export default function IndexComponent() {
             <motion.div style={{ x: x2 }} className={styles.slider}>
                 {
                     slider2.map((project, index) => {
-                        return <div key={index} className={styles.project} style={{ backgroundColor: project.color }} >
+                        return <div key={index} className={`${styles.project} hover:scale-110 transition`} style={{ backgroundColor: project.color }} >
                             <div key={index} className={styles.imageContainer}>
                                 <Image
                                     fill={true}

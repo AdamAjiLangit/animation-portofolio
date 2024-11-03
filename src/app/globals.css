@@ -2,12 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'open-sans';
+  src: url('/assets/fonts/OpeningHoursSans-Regular.otf') format('otf');
+}
+
+:root {
+  --font-open-sans: 'open-sans';
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 20px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
 body {
   margin: 0px;
   padding: 0px;
   overflow: hidden;
   /* overflow-x: hidden; */
-  cursor: wait;
 }
 
 @media screen and (max-width: 400px) {
